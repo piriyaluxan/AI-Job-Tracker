@@ -32,7 +32,7 @@ export default function AnalyticsChart({ jobs }: { jobs: any[] }) {
       <CardContent className="p-5">
         <h2 className="text-lg font-semibold mb-4">Application Funnel</h2>
 
-        <div className="h-[300px]">
+        <div className="h-75">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
               <XAxis dataKey="name" />

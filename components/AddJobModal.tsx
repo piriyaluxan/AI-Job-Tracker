@@ -41,7 +41,7 @@ export default function AddJobModal({ onClose, onSuccess, editJob }: any) {
 
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
-      <div className="bg-white w-[500px] p-6 rounded-xl">
+      <div className="bg-white w-125 p-6 rounded-xl">
         <h2 className="text-xl font-semibold mb-4">
           {editJob ? "Edit Job" : "Add Job"}
         </h2>
