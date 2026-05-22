@@ -6,6 +6,10 @@ import Stats from "@/components/Stats";
 import JobList from "@/components/JobList";
 import AddJobModal from "@/components/AddJobModal";
 import AIAnalyzer from "@/components/AIAnalyzer";
+import AnalyticsChart from "@/components/AnalyticsChart";
+import AIInsights from "@/components/AIInsights";
+import AISuggestions from "@/components/AISuggestions";
+import ResumeUploader from "@/components/ResumeUploader";
 
 export default function DashboardClient({ jobs: initialJobs }: any) {
   const [jobs, setJobs] = useState(initialJobs);
@@ -53,9 +57,12 @@ export default function DashboardClient({ jobs: initialJobs }: any) {
             + Add Job
           </button>
         </div>
+        <ResumeUploader />
         <AIAnalyzer />
         <Stats jobs={jobs} />
-
+        <AIInsights jobs={jobs} />
+        <AnalyticsChart jobs={jobs} />
+        <AISuggestions />
         <JobList jobs={jobs} onDelete={handleDelete} onEdit={handleEdit} />
 
         {open && (
